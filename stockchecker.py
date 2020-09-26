@@ -11,26 +11,25 @@ import requests
 
 
 STOCK_PAGE = ''
-STOCK_PAGE = ''
+LAUNCH_PAGE = ''
 
 def select_card():
     """Runs on startup and allows for user to input which card they want to search for."""
     global STOCK_PAGE
-    global STOCK_PAGE
+    global LAUNCH_PAGE
     stock_3090 = 'https://api-prod.nvidia.com/direct-sales-shop/DR/products/en_us/USD/5438481600'
     page_3090 = 'https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090/'
     stock_3080 = 'https://api-prod.nvidia.com/direct-sales-shop/DR/products/en_us/USD/5438481700'
     page_3080 = 'https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3080/'
 
-    choice = int(input('Enter the number choice for which card you want\n'
-                +'[1] RTX 3080\n[2] RTX 3090\n'))
+    choice = int(input('Enter the number choice for which card you want\n[1] RTX 3080\n[2] RTX 3090\n'))
 
     if choice == 1:
         STOCK_PAGE = stock_3080
-        STOCK_PAGE = page_3080
+        LAUNCH_PAGE = page_3080
     elif choice == 2:
         STOCK_PAGE = stock_3090
-        STOCK_PAGE = page_3090
+        LAUNCH_PAGE = page_3090
 
 def check_stock():
     """Checks the api to see if the inventory is out of stock
@@ -47,7 +46,7 @@ def check_stock():
     current_time = now.strftime("%H:%M:%S")
     if stock_status != 'PRODUCT_INVENTORY_OUT_OF_STOCK':
         print(f'Item : [{item_name}] is now in stock at {current_time}. Launching webpage')
-        webbrowser.open(STOCK_PAGE, new=1)
+        webbrowser.open(LAUNCH_PAGE, new=1)
         playsound('bell.mp3')
     else:
         print(f'Item : [{item_name}] is out of stock at {current_time}')
