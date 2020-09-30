@@ -46,8 +46,9 @@ def check_stock():
     current_time = now.strftime("%H:%M:%S")
     if stock_status != 'PRODUCT_INVENTORY_OUT_OF_STOCK':
         print(f'Item : [{item_name}] is now in stock at {current_time}. Launching webpage')
-        webbrowser.open(LAUNCH_PAGE, new=1)
         playsound('bell.mp3')
+        webbrowser.open(LAUNCH_PAGE, new=1)
+        halt = input('Press ENTER to continue scanning for stock')
     else:
         print(f'Item : [{item_name}] is out of stock at {current_time}')
 
