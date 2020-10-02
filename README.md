@@ -7,7 +7,7 @@ THIS IS ONLY FOR THE FOUNDERS EDITIONS LOCATED ON NVIDIA'S WEBSITE
 ## Intructions
 1. Download and Install latest version of Python from [Here](https://www.python.org/downloads/) 
 2. Download the source folder [Here](https://github.com/Kehz/RTX3000FEStockChecker/archive/master.zip) and extract it wherever. 
-3. Open up your command prompt and type "pip install playsound".
+3. Open up your command prompt and type "pip install playsound" and "pip install requests".
 4. Run "run.bat" or through python by doing "python stockchecker.py" in a terminal
 5. Choose which card you want through the terminal by inputting (1) or (2) etc..
 
