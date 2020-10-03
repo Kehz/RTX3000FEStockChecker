@@ -1,7 +1,7 @@
 # RTX3080StockChecker
 Simple python script that will play a sound and launch the website when chosen RTX 3000 series is in stock. It will not add to cart and checkout for you.
 Intended for you to not have to spam refresh all day waiting. When 3070 Lanches it'll be added as well
-THIS IS ONLY FOR THE FOUNDERS EDITIONS LOCATED ON NVIDIA'S WEBSITE
+THIS IS ONLY FOR THE FOUNDERS EDITIONS LOCATED ON NVIDIA'S WEBSITE FOR THE UNITED STATES. MODIFY SOURCE CODE TO USE YOUR COUNTRIES LINKS
 
 
 ## Intructions
